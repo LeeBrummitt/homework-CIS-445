@@ -1,11 +1,12 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 
 app.get('/', function(request, response) {  response.sendfile(__dirname + "/index.html");});  //index.html is a seperate file
 
 app.listen(8080);
 
+//seperate test files needed
 app.get('/server/review/:reviewid', function(req, response) {
     response.sendfile(__dirname + "/test1.json");
 });
